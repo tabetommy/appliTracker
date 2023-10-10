@@ -18,12 +18,29 @@ app.get('/', (req, res) => {
     res.send("here")                                                       
 });
 
-//contact details
-app.post('/personalinfos', (req, res) => {        
+//personal information
+app.post('/personalinfo', (req, res) => {        
     let data = req.body;
     res.send('Data Received: ' + JSON.stringify(data));                                                         
 });
 
+//skills
+app.post('/skills', (req, res) => {        
+    let data = req.body;
+    res.send('Data Received: ' + JSON.stringify(data));                                                         
+});
+
+//education
+app.post('/education', (req, res) => {        
+    let data = req.body;
+    res.send('Data Received: ' + JSON.stringify(data));                                                         
+});
+
+//experiences
+app.post('/experience', (req, res) => {        
+    let data = req.body;
+    res.send('Data Received: ' + JSON.stringify(data));                                                         
+});
 
 app.listen(port, () => {
     console.log(`Now listening on port ${port}`);
