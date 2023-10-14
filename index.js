@@ -2,11 +2,12 @@ const express=require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Models = require('./models.js');
+require("dotenv").config();
 
 //instatiations
 const app = express();
 const Users=Models.User;
-mongoose.connect("", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //middelware
 app.use(bodyParser.json());
